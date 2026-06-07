@@ -21,7 +21,7 @@ const CATEGORIES: Category[] = [
   {
     label: 'AI / LLM',
     color: '#f59e0b',
-    skills: ['YOLOv4', 'OpenCV', 'HyperCLOVA X', 'Clova Speech'],
+    skills: ['HyperCLOVA X', 'CLOVA Speech', 'LangChain', 'YOLOv4', 'OpenCV'],
   },
   {
     label: 'Frontend',
@@ -31,7 +31,7 @@ const CATEGORIES: Category[] = [
   {
     label: 'DevOps / Cloud',
     color: '#ec4899',
-    skills: ['AWS EC2', 'Docker', 'Git', 'GitHub Actions', 'Linux', 'Figma'],
+    skills: ['AWS EC2', 'Naver Cloud Platform', 'Docker', 'Git', 'GitHub Actions', 'Linux'],
   },
 ];
 

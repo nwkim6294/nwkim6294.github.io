@@ -17,17 +17,36 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+    number: '00',
+    title: 'AI 여행 플랫폼 (TripMoa)',
+    subtitle: '팀 프로젝트 · 진행중',
+    events: ['🚧 진행중'],
+    desc: '여행 일정 자동 생성·관리부터 동행자 매칭, 정산까지 여행의 전 과정을 지원하는 AI 기반 여행 커뮤니티 플랫폼입니다.',
+    role: [
+      'AI 일정 생성 서버 개발 (FastAPI) — LangChain + HyperCLOVA X로 장소별 체류시간·페이스 산정, Nearest Neighbor TSP + Haversine으로 하루 동선 최적화',
+      'ODsay 대중교통 API + NAVER Map Geocoding API 연동 — 실제 이동시간 계산 및 주소→좌표 변환, 핀 장소 고정·충돌 검사 로직 구현',
+      'Spring Boot AI 클라이언트 개발 — Python AI 서버와 RestTemplate으로 통신, 일정 생성·장소 검색·OCR LLM 분석 3개 엔드포인트 프록시 처리',
+      '프론트엔드 AI 일정 생성 UI 개발 (React/TypeScript) — 장소 검색·핀 고정·숙소·출발지·교통수단 설정 모달 구현, 생성된 타임라인 DayView 렌더링',
+    ],
+    tags: ['Python', 'FastAPI', 'LangChain', 'HyperCLOVA X', 'Spring Boot', 'React', 'TypeScript', 'NAVER Map API', 'ODsay API', 'Docker'],
+    gradient: 'linear-gradient(135deg, #10b981 0%, #3b82f6 100%)',
+    links: [
+      { label: 'GitHub', href: 'https://github.com/TripMoa', type: 'github' },
+    ],
+  },
+  {
     number: '01',
-    title: 'AI기반 회의록 관리 시스템',
+    title: 'AI기반 회의록 관리 시스템 (DialoG)',
     subtitle: '팀 프로젝트',
     events: ['이젠아카데미DX교육센터 백엔드 웹개발자 부트캠프'],
-    desc: '회의 중 발언을 실시간으로 텍스트화하고, AI가 자동으로 회의록과 요약을 생성하는 웹 서비스입니다.',
+    desc: '회의 내용을 실시간 텍스트화하고, 회의록·일정을 자동 생성하며 챗봇으로 회의 내용을 검색·질의할 수 있는 웹 서비스입니다.',
     role: [
-      'STT 파이프라인 구축 — 실시간 음성을 텍스트로 변환하는 백엔드 처리 흐름 설계',
-      'WebSocket 서버 개발 — 다수 참가자 간 실시간 데이터 동기화 처리',
-      'AI 회의록 생성 API 설계 및 챗봇 Q&A 응답 서버 구현',
+      '실시간 STT 서버 개발 — CLOVA Speech API + gRPC 스트리밍 기반, WebSocket으로 클라이언트 오디오 수신 후 실시간 텍스트 변환 처리',
+      '화자 구분(Diarization) 시스템 구현 — 발화자 식별·분리 로직 설계, 최대 10인 참가자의 발화 로그를 화자별로 매핑',
+      '프론트엔드 기본 구조 설계 — 전체 HTML/CSS/JS 구조 설계 및 실시간 음성 녹음·STT 처리 화면 구현',
+      'STT·백엔드 서버 연결 — 스트리밍 서버와 Spring Boot 백엔드 간 API 연동, CORS·쿠키 설정 개선',
     ],
-    tags: ['Python', 'STT', 'WebSocket', 'AI Chatbot', 'React'],
+    tags: ['Python', 'FastAPI', 'CLOVA Speech', 'HyperCLOVA X', 'WebSocket', 'gRPC', 'Redis', 'Docker', 'AWS EC2'],
     gradient: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
     links: [
       { label: 'GitHub',    href: 'https://github.com/DialoG1125',               type: 'github'  },
@@ -45,7 +64,7 @@ const PROJECTS: Project[] = [
       'WISE-PaaS/Dashboard 구성 — SingleStat·Graph·Thermometer 패널로 6축 센서 데이터 시각화',
       'LINE 실시간 알림 연동 (WISE-PaaS/Notification), 팀 일정·진행 관리 총괄',
     ],
-    tags: ['Python', 'Flask', 'MySQL', 'TensorFlow', 'CAE', 'GRU', 'WISE-PaaS', 'Modbus'],
+    tags: ['Python', 'Flask', 'MySQL', 'TensorFlow', 'CAE', 'GRU', 'WISE-PaaS', 'Modbus', 'AWS EC2'],
     gradient: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
     links: [
       { label: 'GitHub',  href: 'https://github.com/nwkim6294/KW_Aius',          type: 'github'  },
@@ -129,7 +148,10 @@ export default function Projects() {
               <div className={styles.info}>
                 <div className={styles.eventRow}>
                   {p.events.map((e) => (
-                    <span key={e} className={styles.event}>{e}</span>
+                    <span
+                      key={e}
+                      className={`${styles.event} ${e.includes('진행중') ? styles.eventInProgress : ''}`}
+                    >{e}</span>
                   ))}
                 </div>
                 <h3 className={styles.cardTitle}>{p.title}</h3>

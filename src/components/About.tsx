@@ -102,6 +102,26 @@ export default function About() {
           </div>
         </motion.div>
 
+        {/* 교육이수 */}
+        <motion.div
+          className={styles.block}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: .5, delay: .05 }}
+        >
+          <h3 className={styles.blockTitle}>교육이수</h3>
+          <div className={styles.eduList}>
+            <div className={styles.eduItem}>
+              <div className={styles.eduLeft}>
+                <span className={styles.eduSchool}>이젠아카데미DX교육센터</span>
+                <span className={styles.eduMajor}>백엔드 웹개발자 부트캠프 (Java · Python · AI챗봇) · 900H</span>
+              </div>
+              <span className={styles.eduPeriod}>2025.06 — 2025.12</span>
+            </div>
+          </div>
+        </motion.div>
+
         {/* 수상 & 어학 */}
         <div className={styles.bottomGrid}>
           <motion.div

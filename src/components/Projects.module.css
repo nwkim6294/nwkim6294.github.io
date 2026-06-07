@@ -70,6 +70,13 @@
   font-family: 'Inter', 'Noto Sans KR', sans-serif;
 }
 
+/* 진행중 뱃지 */
+.eventInProgress {
+  color: #10b981;
+  background: rgba(16,185,129,.1);
+  border-color: rgba(16,185,129,.3);
+}
+
 .cardTitle {
   font-size: 20px; font-weight: 700;
   color: var(--text); letter-spacing: -.5px; line-height: 1.2;
