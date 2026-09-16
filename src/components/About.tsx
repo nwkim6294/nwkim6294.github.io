@@ -26,7 +26,7 @@ const AWARDS = [
 ] as const;
 
 const STATS = [
-  { number: '5',    label: '프로젝트' },
+  { number: '6',    label: '프로젝트' },
   { number: '3',    label: '학회 발표' },
   { number: '1',    label: '수상' },
 ] as const;
@@ -46,13 +46,10 @@ export default function About() {
           >
             <h2 className={styles.title}>코드로 아이디어를<br />현실로 만듭니다.</h2>
             <p className={styles.bio}>
-              백엔드 개발자를 목표로, API 설계·서버 구축·AI 연동에
-              집중해온 개발자입니다. 산업용 로봇 이상 탐지,
-              협동로봇 자동화, AI 회의 보조 등 다양한 프로젝트에서
-              서버 및 시스템 설계를 담당했습니다.
+              Java·Spring Boot 기반 백엔드 서버 설계부터 Python·FastAPI를 활용한 AI 파이프라인 연동까지, 서버 전반을 직접 구현해온 개발자입니다. 산업용 로봇 이상 탐지, AI 회의 보조, AI 여행 플랫폼 등 다양한 도메인에서 실서비스 배포 경험을 쌓았습니다.
             </p>
             <p className={styles.bio} style={{ marginTop: '12px' }}>
-              광운대학교 정보융합학부를 졸업했으며 여러 학회와 전시에 참여하며 경험을 쌓았습니다.
+              광운대학교 정보융합학부를 졸업했으며, 여러 학회·전시 참여와 실프로젝트를 통해 실무에 가까운 경험을 쌓아왔습니다. 2026년에는 LG AI연구원이 주관하는 LG Aimers 9기(Phase 1·2)를 수료했습니다.
             </p>
 
             <div className={styles.stats}>
@@ -112,6 +109,13 @@ export default function About() {
         >
           <h3 className={styles.blockTitle}>교육이수</h3>
           <div className={styles.eduList}>
+            <div className={styles.eduItem}>
+              <div className={styles.eduLeft}>
+                <span className={styles.eduSchool}>(주)LG경영개발원 AI연구원 — LG Aimers 9기</span>
+                <span className={styles.eduMajor}>Phase 1&amp;2 · 연구·R&amp;D(AI) · 고용노동부 청년 일경험 지원사업(ESG지원형) · 11주</span>
+              </div>
+              <span className={styles.eduPeriod}>2026.06 — 2026.09</span>
+            </div>
             <div className={styles.eduItem}>
               <div className={styles.eduLeft}>
                 <span className={styles.eduSchool}>이젠아카데미DX교육센터</span>

@@ -47,3 +47,15 @@
   border-color: rgba(99,102,241,.4);
   background: rgba(99,102,241,.06);
 }
+
+.resumeBtn {
+  display: inline-block;
+  font-size: 14px; font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 10px 24px;
+  transition: background .2s, opacity .2s;
+}
+.resumeBtn:hover { opacity: .85; }

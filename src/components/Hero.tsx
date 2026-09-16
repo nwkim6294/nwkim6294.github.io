@@ -8,11 +8,11 @@ function scrollTo(href: string) {
 const CODE_SNIPPET = `const developer = {
   name: "김나운",
   role: "Backend Developer",
-  stack: [ "Java", "Spring Boot", 
+  stack: [ "Java", "Spring Boot",
            "Python", "FastAPI",
-           "MySQL", "React"],
-  interests: ["서버 아키텍처", "AI 연동",
-               "시스템 설계"],
+           "LangChain", "HyperCLOVA X"],
+  interests: ["서버 아키텍처", "AI 파이프라인",
+               "실시간 처리"],
   available: true,
 };`;
 
@@ -48,8 +48,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: .6, delay: .3 }}
           >
-            사람과 서비스 사이의 흐름을 만듭니다.<br />
-            보이지 않는 연결을 설계하는 개발자입니다.
+            Java와 Python으로 서버를 짓고,<br />AI 파이프라인을 직접 연결하는 <strong>백엔드 개발자</strong>입니다.
           </motion.p>
 
           <motion.div

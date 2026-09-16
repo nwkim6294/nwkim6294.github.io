@@ -11,12 +11,12 @@ const CATEGORIES: Category[] = [
   {
     label: 'Backend',
     color: '#6366f1',
-    skills: ['Java', 'Spring Boot', 'Python', 'FastAPI', 'Node.js', 'Express', 'WebSocket', 'REST API'],
+    skills: ['Java', 'Spring Boot', 'Spring Security', 'Python', 'FastAPI', 'Node.js', 'Express', 'WebSocket', 'gRPC'],
   },
   {
     label: 'Database',
     color: '#22c55e',
-    skills: ['MySQL', 'MongoDB', 'MariaDB', 'AWS RDS'],
+    skills: ['MySQL', 'Redis'],
   },
   {
     label: 'AI / LLM',

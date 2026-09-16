@@ -21,6 +21,8 @@ export default function Contact() {
           </a>
           <div className={styles.socials}>
             <a href="https://github.com/nwkim6294" target="_blank" rel="noreferrer" className={styles.socialBtn}>GitHub</a>
+            <a href="https://linkedin.com/in/나운-김-460a69367" target="_blank" rel="noreferrer" className={styles.socialBtn}>LinkedIn</a>
+            <a href="/resume.pdf" download className={styles.resumeBtn}>이력서 다운로드 ↓</a>
           </div>
         </motion.div>
       </div>
