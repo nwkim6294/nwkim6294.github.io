@@ -3,14 +3,14 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:         #f9f8f6;
-  --bg-2:       #f3f1ed;
-  --text:       #1a1a18;
-  --text-muted: #78716c;
-  --text-dim:   #a8a29e;
-  --accent:     #c05621;
-  --border:     #e5e3de;
-  --border-strong: #ccc9c3;
+  --bg:         #ffffff;
+  --bg-2:       #f8fafc;
+  --text:       #0f172a;
+  --text-muted: #475569;
+  --text-dim:   #94a3b8;
+  --accent:     #334155;
+  --border:     #e2e8f0;
+  --border-strong: #cbd5e1;
   --nav-h: 52px;
 }
 

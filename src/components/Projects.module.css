@@ -29,7 +29,6 @@
   transition: background .15s;
 }
 .card:last-child { border-bottom: none; }
-.card:hover { background: var(--bg-2); }
 
 /* number column */
 .num {
@@ -55,8 +54,8 @@
 .event {
   font-size: 11px; font-weight: 600;
   color: var(--accent);
-  background: rgba(192,86,33,.07);
-  border: 1px solid rgba(192,86,33,.18);
+  background: rgba(51,65,85,.07);
+  border: 1px solid rgba(51,65,85,.18);
   border-radius: 5px;
   padding: 2px 9px;
   font-family: 'Inter', sans-serif;
@@ -82,8 +81,8 @@
 
 /* ── Role box ── */
 .roleBox {
-  background: rgba(192,86,33,.04);
-  border: 1px solid rgba(192,86,33,.14);
+  background: rgba(51,65,85,.04);
+  border: 1px solid rgba(51,65,85,.14);
   border-left: 3px solid var(--accent);
   border-radius: 0 8px 8px 0;
   padding: 10px 14px;
@@ -131,10 +130,10 @@
 
 .github {
   color: var(--accent);
-  background: rgba(192,86,33,.07);
-  border: 1px solid rgba(192,86,33,.18);
+  background: rgba(51,65,85,.07);
+  border: 1px solid rgba(51,65,85,.18);
 }
-.github:hover { background: rgba(192,86,33,.14); border-color: rgba(192,86,33,.35); }
+.github:hover { background: rgba(51,65,85,.14); border-color: rgba(51,65,85,.35); }
 
 .youtube {
   color: #dc2626;
