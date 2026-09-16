@@ -11,7 +11,6 @@ interface Project {
   desc: string;
   role: string[];
   tags: string[];
-  gradient: string;
   links: PLink[];
 }
 
@@ -56,7 +55,6 @@ const PROJECTS: Project[] = [
       'STT·백엔드 서버 연결 — 스트리밍 서버와 Spring Boot 백엔드 간 3개 API 엔드포인트 연동, Template 페르소나 적용으로 AI API 비용 약 80% 절감, Redis 캐싱으로 챗봇 응답 레이턴시 단축, 핵심 기능 목표 달성도 90%',
     ],
     tags: ['Python', 'FastAPI', 'CLOVA Speech', 'CLOVA Chatbot', 'HyperCLOVA X', 'WebSocket', 'gRPC', 'Spring Boot', 'Spring Security', 'Redis', 'Docker', 'AWS EC2'],
-    gradient: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
     links: [
       { label: 'GitHub',    href: 'https://github.com/DialoG1125',               type: 'github'  },
       { label: 'YouTube',   href: 'https://www.youtube.com/watch?v=CXcnrlnhUwg', type: 'youtube' },
@@ -75,7 +73,6 @@ const PROJECTS: Project[] = [
       '프론트엔드 AI 일정 생성 UI 개발 (React/TypeScript) — 장소 검색·핀 고정·숙소·출발지·교통수단 설정 모달 구현, 생성된 타임라인 DayView 렌더링',
     ],
     tags: ['Python', 'FastAPI', 'LangChain', 'HyperCLOVA X', 'Spring Boot', 'React', 'TypeScript', 'NAVER Map API', 'ODsay API', 'Docker'],
-    gradient: 'linear-gradient(135deg, #10b981 0%, #3b82f6 100%)',
     links: [
       { label: 'GitHub', href: 'https://github.com/TripMoa', type: 'github' },
     ],
@@ -92,7 +89,6 @@ const PROJECTS: Project[] = [
       'LINE 실시간 알림 연동 (WISE-PaaS/Notification) — 이상 감지 시 담당자에게 즉시 푸시 발송, 팀장으로 일정·역할 분배 총괄',
     ],
     tags: ['Python', 'Flask', 'MySQL', 'TensorFlow', 'CAE', 'GRU', 'WISE-PaaS', 'Modbus', 'AWS EC2'],
-    gradient: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
     links: [
       { label: 'GitHub',  href: 'https://github.com/nwkim6294/KW_Aius',          type: 'github'  },
       { label: 'YouTube', href: 'https://www.youtube.com/watch?v=b-ltp2Gh6-s',   type: 'youtube' },
@@ -110,7 +106,6 @@ const PROJECTS: Project[] = [
       'Socket.IO 실시간 통신 구현 — UR3e 로봇 제어 명령 및 상태를 클라이언트에 100ms 이내 실시간 동기화, 상품 인식 소요 약 8초',
     ],
     tags: ['React', 'Node.js', 'Socket.IO', 'YOLOv4', 'CRNN', 'UR3e', 'Axios'],
-    gradient: 'linear-gradient(135deg, #22c55e 0%, #06b6d4 100%)',
     links: [
       { label: '2024 로보월드', href: 'https://www.youtube.com/watch?v=K_iIgnoDD0o', type: 'youtube' },
       { label: '2024 CO-SHOW', href: 'https://www.youtube.com/watch?v=814huLgABlY',  type: 'youtube' },
@@ -123,7 +118,7 @@ export default function Projects() {
     <section id="projects" className={styles.section}>
       <div className={styles.inner}>
         <p className={styles.label}>// 프로젝트</p>
-        <h2 className={styles.title}>직접 만든<br />것들입니다.</h2>
+        <h2 className={styles.title}>참여한 프로젝트입니다.</h2>
 
         <div className={styles.list}>
           {PROJECTS.map((p) => (
@@ -135,12 +130,8 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              {/* 왼쪽 컬러 패널 */}
-              <div className={styles.panel} style={{ background: p.gradient }}>
-                <span className={styles.num}>{p.number}</span>
-              </div>
+              <span className={styles.num}>{p.number}</span>
 
-              {/* 오른쪽 정보 */}
               <div className={styles.info}>
                 <div className={styles.eventRow}>
                   {p.events.map((e) => (

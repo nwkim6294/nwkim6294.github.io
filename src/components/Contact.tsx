@@ -12,7 +12,7 @@ export default function Contact() {
           transition={{ duration: .6 }}
         >
           <p className={styles.label}>// 연락처</p>
-          <h2 className={styles.title}>함께 만들어가겠습니다</h2>
+          <h2 className={styles.title}>연락 주시면 빠르게 답변드립니다.</h2>
           <p className={styles.desc}>
             새로운 프로젝트, 협업, 취업 제안을 기다리고 있습니다.<br />
           </p>

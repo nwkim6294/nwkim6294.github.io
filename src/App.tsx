@@ -1,4 +1,3 @@
-import { useMouseSpotlight } from './hooks/useMouseSpotlight';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,13 +7,8 @@ import Contact from './components/Contact';
 import styles from './App.module.css';
 
 export default function App() {
-  useMouseSpotlight();
-
   return (
     <>
-      <div id="dot-grid" />
-      <div id="spotlight" />
-
       <Navbar />
       <main>
         <Hero />
@@ -23,10 +17,10 @@ export default function App() {
         <Projects />
         <Contact />
       </main>
-
       <footer className={styles.footer}>
         <div className={styles.inner}>
           <span>© 2026 김나운. All rights reserved.</span>
+          <span>Backend Developer · Seoul</span>
         </div>
       </footer>
     </>

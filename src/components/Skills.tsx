@@ -40,7 +40,7 @@ export default function Skills() {
     <section id="skills" className={styles.section}>
       <div className={styles.inner}>
         <p className={styles.label}>// 기술 스택</p>
-        <h2 className={styles.title}>도구를 능숙하게<br />다룹니다.</h2>
+        <h2 className={styles.title}>주로 사용하는 기술입니다.</h2>
 
         <div className={styles.grid}>
           {CATEGORIES.map((cat, ci) => (
